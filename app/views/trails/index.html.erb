@@ -1,0 +1,15 @@
+<h1 class= 'allthetrips'> All The Trails </h1>
+<div class ='flex-container'>
+  <% @trails.each do |t| %>
+    <div class='individual-div'>
+      <%=link_to t.name, trail_path(t)%>
+      <hr>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  <%end%>
+</div>

@@ -5,4 +5,6 @@ class Trail < ApplicationRecord
   def total_trips
     trips.count
   end
+
+
 end

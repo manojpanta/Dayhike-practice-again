@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_09_211212) do
+ActiveRecord::Schema.define(version: 2019_02_20_024207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_02_09_211212) do
     t.string "name"
     t.string "address"
     t.integer "length"
+    t.string "slug"
   end
 
   create_table "trip_tails", force: :cascade do |t|
@@ -34,6 +35,14 @@ ActiveRecord::Schema.define(version: 2019_02_09_211212) do
     t.string "name"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.string "slug"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "email"
+    t.string "slug"
   end
 
   add_foreign_key "trip_tails", "trails"

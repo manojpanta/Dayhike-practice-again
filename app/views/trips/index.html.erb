@@ -1,5 +1,24 @@
-<% @trips.each do |t| %>
-  <%=link_to t.name, trip_path(t)%>
-  <%=t.start_date%>
-  <%=t.end_date%>
-<%end%>
+<h1 class= 'allthetrips'> All The Trips </h1>
+<div class ='flex-container'>
+  <% @trips.each do |t| %>
+    <div class='individual-div'>
+      <%=link_to t.name, trip_path(t)%>
+      <hr>
+      <br>
+      <br>
+      Start date:  <%=t.start_date%>
+      <br>
+      <br>
+      End date:  <%=t.end_date%>
+      <br>
+      <br>
+    </div>
+  <%end%>
+</div>
+
+<p class="linktosignup"><%= link_to "Sign Up to Be a User", new_user_path %>
+<br>
+<br>
+<p class='linktocreate'><%= link_to "I already have an account", login_path%></p>
+<br>
+<p class='linktocreate'><%= link_to "See all the trails Here!", trails_path%></p>
